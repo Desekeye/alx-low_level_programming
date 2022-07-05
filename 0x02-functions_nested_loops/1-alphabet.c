@@ -4,11 +4,11 @@
  */
 #include "main.h"
 /**
- * main - entry point
+ * print_alphabet - prints the alphabet in lowercase
  *
  * Return: Always 0 (epitychia)
  */
-int main(void)
+void print_alphabet(void)
 {
 	char letter;
 

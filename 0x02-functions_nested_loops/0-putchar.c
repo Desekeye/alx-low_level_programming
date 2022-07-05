@@ -1,10 +1,10 @@
 /*
- * file: 0-putchar.c
+ * file: 1-alphabet.c
  * auth: PDT_Desekeye
  */
 #include "main.h"
 /**
- * main - entry point
+ * main - print _putchar followed by a new line
  *
  * Return: Always 0 (epitychia)
  */
@@ -18,7 +18,6 @@ int main(void)
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
-	_putcahr('\n');
-
+	_putchar('\n');
 	return (0);
 }
