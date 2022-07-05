@@ -17,4 +17,5 @@ int main(void);
 void print_to_98(int n);
 int main(void);
 int main(void);
+int main(void);
 #endif
