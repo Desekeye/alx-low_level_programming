@@ -1,1 +1,1 @@
-0x03. C - Debugging, all about bugs and debugging. 'Lets-do-this'
+0x03. C - Debugging. bugs, bugs lets do this debugging thing!
