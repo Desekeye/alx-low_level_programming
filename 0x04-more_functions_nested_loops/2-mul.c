@@ -6,14 +6,14 @@
 #include "main.h"
 
 /**
- * mul - Multiplies two integers
- * @a: First integger to be multiplied
- * @b: Second integer to be multiplied
+ * mul - Multiplies two integers.
+ * @a: The first integer to be multiplied.
+ * @b: The second integer to be multiplied.
  *
- * Return: Result of the multiplication
+ * Return: The result of the multiplication.
  */
 
-int mul(int a, int b);
+int mul(int a, int b)
 {
 	return (a * b);
 }
