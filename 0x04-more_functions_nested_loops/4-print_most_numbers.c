@@ -1,8 +1,3 @@
-/*
- * file: 4-print_most_numbers.c
- * auth: PDT_Desekeye
- */
-
 #include "main.h"
 
 /**
