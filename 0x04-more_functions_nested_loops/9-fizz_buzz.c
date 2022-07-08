@@ -21,13 +21,13 @@ int main(void)
 		{
 			printf(" Fizz");
 		}
-		else if (n % 5 == 0)
+		else if (num % 5 == 0)
 		{
 			printf(" Buzz");
 		}
 		else
 		{
-			printf(" %d", n);
+			printf(" %d", num);
 		}
 	}
 	printf("\n");
