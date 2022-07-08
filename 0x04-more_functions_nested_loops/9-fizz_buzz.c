@@ -1,9 +1,7 @@
 #include <stdio.h>
 /**
- * main - prints the numbers from 1 to 100, followed by a new line
- * mul of 3 print Fizz
+ * main - prints the numbers from 1 to 100, mul of 3 print Fizz
  * mul of 5 print Buzz
- * mul of both 3 and 5 print FizzBuzz
  * Return: Always 0
  */
 
