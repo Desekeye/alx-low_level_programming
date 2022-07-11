@@ -6,7 +6,7 @@
  * @dest: string Destination
  * @src: String copied from
  *
- * Return: pointer to dest. (epitychia)
+ * Return: pointer to dest.
  */
 
 char *_strcpy(char *dest, char *src)
