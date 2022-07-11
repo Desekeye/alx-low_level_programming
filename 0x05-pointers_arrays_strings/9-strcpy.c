@@ -5,20 +5,18 @@
  * @dest: string Destination
  * @src: String copied from
  *
- * Return: Always 0. (epitychia)
+ * Return: pointer to dest. (epitychia)
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	int i, j;
-
 	int i = o;
 
-	while (src[i] != 0)
+	while (*(src + i))
+	{
+		*(dest + i) = *(src + i);
 		i++;
-	for (j = 0; j <= i; j++)
-		dest[j] = src[j];
-
+	}
+	*(dest + i) = '\0';
 	return (dest);
-
 }
