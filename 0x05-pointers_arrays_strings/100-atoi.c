@@ -3,7 +3,7 @@
 /**
  * _atoi - converts a string to an integer
  * @s: the string to convert
- * Return: Always 0. (epitychia)
+ * Return: string converted. (epitychia)
  */
 
 int _atoi(char *s)
@@ -34,6 +34,6 @@ int _atoi(char *s)
 	}
 
 	result *= minus;
-	return (0);
+	return (resutl);
 
 }
