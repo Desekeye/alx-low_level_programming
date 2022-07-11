@@ -8,32 +8,22 @@
 
 int _atoi(char *s)
 {
-	short bolean;
-	int i, minus, result;
+	int i, j, n, m;
 
-	i = minus = result = bolean = 0;
+	i = n = 0;
+	m = 1;
 
-	minus = -1;
-
-	while (s[i] != '\0')
+	while ((*(s + i) < '0' || *(s + i) > '9') && (*(s + i) != '\0'))
 	{
-		if (s[i] == '-')
-			minus *= -1;
-
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			result *= 10;
-			result -= (s[i] - '0');
-			boolean = 1;
-		}
-
-		else if (boolean == 1)
-			break;
+		if (*(s + i) == '-')
+			m *= -1;
 		i++;
-
 	}
-
-	result *= minus;
-	return (resutl);
-
+	j = i;
+	while ((*(s + j) >= '0') && (*(s + j) <= '9'))
+	{
+		n = n * 10 + m * (*(s + j) - '0');
+		j++;
+	}
+	return (n);
 }
