@@ -7,7 +7,7 @@
  * Return: Always 0 (epitychia)
  */
 
-char *rot13(char *str)
+char *rot13(char *)
 {
 	int indx1 = 0, indx2;
 	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
