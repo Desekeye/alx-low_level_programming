@@ -4,7 +4,6 @@
  * _strcmp - compares two strings
  * @s1: First string for comparison
  * @s2: Second string for comparison
- *
  * Return: Return: 0 if s1 and s2 are equals,
  * if not alternate number
  */
@@ -16,7 +15,7 @@ int _strcmp(char *s1, char *s2)
 	while (op == 0)
 	{
 		if ((*(s1 + i) == '\0') && (*(s2 + i) == '\0'))
-			;
+			break;
 		op = *(s1 + i) - *(s2 + i);
 		i++;
 	}
