@@ -3,7 +3,7 @@
 /**
  * _memset - fills memory with a constant byte.
  * @s: pointer
- * @b: memoery location
+ * @b: memory location
  * @n: number of bytes
  *
  * Return: s
@@ -11,13 +11,10 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	unsigned int index;
+	unsigned char *memory = s, value = c;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
-
-	for ( ; i < n; i++)
-		s[i] = '\0';
-
-	return (s);
+	for (index = 0; index < n; index++)
+		memory[index] = value;
+	return (memory);
 }
