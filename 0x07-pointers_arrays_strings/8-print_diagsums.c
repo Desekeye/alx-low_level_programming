@@ -1,7 +1,9 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_diagsums - locates a character in a string
+ * print_diagsums - prints the sum of the two diagonals 
+ * of a square matrix of integers.
  * @a: is a pointer type char
  * @size: is a variable type size
  * Return: Nothing
