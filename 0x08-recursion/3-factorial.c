@@ -1,16 +1,23 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - returns the factorial of a given number
- * @s: string to be inputted
- * Return: Always 0 (epitychia)
+ * factorial - Returns the factorial of a given number.
+ * @n: The number to find the factorial of.
+ *
+ * Return: If n > 0 - the factorial of n.
+ *         If n < 0 - 1 to indicate an error.
  */
 int factorial(int n)
 {
-	if (n == 0)
-		return (1);
-	else if (n < 0)
+	int result = n;
+
+	if (n < 0)
 		return (-1);
-	else
-		return (n * factorial(n - 1));
+
+	else if (n >= 0 && n <= 1)
+		return (1);
+
+	result *= factorial(n - 1);
+
+	return (result);
 }
