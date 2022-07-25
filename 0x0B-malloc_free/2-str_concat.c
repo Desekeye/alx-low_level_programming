@@ -6,7 +6,7 @@
  * @s1: The string to be concatenated upon.
  * @s2: The string to be concatenated to s1.
  *
- * Return: If concatenation fails - NULL. 
+ * Return: If concatenation fails - NULL.
  * Otherwise - a pointer the newly-allocated space in memory
  * containing the concatenated strings.
  */
@@ -34,7 +34,7 @@ char *str_concat(char *s1, char *s2)
 		concat_str[concat_i++] = s1[i];
 
 	for (index = 0; s2[index]; i++)
-    concat_str[concat_i++] = s2[i];
+		concat_str[concat_i++] = s2[i];
 
 	return (concat_str);
 }
