@@ -6,37 +6,35 @@
  * @s1: The string to be concatenated upon.
  * @s2: The string to be concatenated to s1.
  *
- * Return: If concatenation fails - NULL.
+ * Return: If concatenation fails - NULL. 
  * Otherwise - a pointer the newly-allocated space in memory
  * containing the concatenated strings.
  */
 
 char *str_concat(char *s1, char *s2)
 {
-  int i, j, k;
-  char *newStr = NULL;
+	char *concat_str;
+	int i, concat_i = 0, len = 0;
 
-  if (s1 == NULL)
-    s1 = "";
-  if (s2 == NULL)
-    s2 = "";
+	if (s1 == NULL)
+		s1 = "";
 
-  for (i = 0; s1[i] != '\0'; i++)
-    ;
+	if (s2 == NULL)
+		s2 = "";
 
-  for (j = 0; s2[j] != '\0'; j++)
-    ;
+	for (i = 0; s1[i] || s2[i]; i++)
+		len++;
 
-  newStr = (char*)malloc((i + j) * sizeof(char));
+	concat_str = malloc(sizeof(char) * len);
 
-  if (newStr == NULL)
-    return (NULL);
+	if (concat_str == NULL)
+		return (NULL);
 
-  for (k = 0; s1[k] != '\0'; k++)
-    newStr[k] = s1[k];
+	for (i = 0; s1[i]; i++)
+		concat_str[concat_i++] = s1[i];
 
-  for (k = 0; s2[k] != '\0'; k++)
-    newStr[k + i] = s2[k];
+	for (index = 0; s2[index]; i++)
+    concat_str[concat_i++] = s2[i];
 
-  return (newStr);
+	return (concat_str);
 }
