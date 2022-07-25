@@ -1,38 +1,46 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
-  * argstostr - fills memory with a constant byte
-  * @ac: is the size of the pointer
-  * @av: is a letter
-  * Return: an address
-  */
+ * argstostr - Concatenates all arguments of the program into a string;
+ *             arguments are separated by a new line in the string.
+ * @ac: The number of arguments passed to the program.
+ * @av: An array of pointers to the arguments.
+ *
+ * Return: If ac == 0, av == NULL, or the function fails - NULL.
+ *         Otherwise - a pointer to the new string.
+ */
 
 char *argstostr(int ac, char **av)
 {
-	char *conca;
-	int i, j, cont = 0, k = 0;
+	char *str;
+	int arg, byte, index, size = ac;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (arg = 0; arg < ac; arg++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-			cont++;
+		for (byte = 0; av[arg][byte]; byte++)
+			size++;
 	}
 
-	conca = malloc(cont * sizeof(char) + ac + 1);
-	if (!conca)
+	str = malloc(sizeof(char) * size + 1);
+
+	if (str == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	index = 0;
+
+	for (arg = 0; arg < ac; arg++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++, k++)
-			conca[k] = av[i][j];
-		conca[k] = '\n';
-		k++;
+		for (byte = 0; av[arg][byte]; byte++)
+			str[index++] = av[arg][byte];
+
+		str[index++] = '\n';
 	}
-	conca[k] = '\0';
-	return (conca);
+
+	str[size] = '\0';
+
+	return (str);
 }
