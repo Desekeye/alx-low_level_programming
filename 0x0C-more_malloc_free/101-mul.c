@@ -15,8 +15,8 @@ int _isdigit(char *s);
 int main(int argc, char *argv[])
 {
 	int i;
-	
-	if (argc != 3)		
+
+	if (argc != 3)
 	{
 		for (i = 0; ERR_MSG[i] != '\0'; i++)
 			_putchar(ERR_MSG[i]);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	}
 	if (_isdigit(argv[1]) == 0)
 		printf("%s\n", argv[1]);
-	
+
 	return (0);
 }
 
