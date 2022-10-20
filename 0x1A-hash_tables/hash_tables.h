@@ -44,7 +44,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
-hash_node_t *hash_table_pair(const char *key, const char *value);
 
 
 /**
@@ -91,4 +90,4 @@ void shash_table_print(const shash_table_t *ht);
 void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
 
-#endif
+#endif /* HASH_TABLES.H */
